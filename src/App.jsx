@@ -38,6 +38,11 @@ const App = () => {
     }
   }
 
+  function handleTagClick(tag) {
+    setInput("")
+    setTags([...tags, createOption(tag)])
+  }
+
   function handleInputKeyDown(e) {
     if (!input) return
     switch (e.key) {
@@ -45,18 +50,12 @@ const App = () => {
       case "Tab":
       case " ":
       case ",":
-        setInput("")
-        setTags([...tags, createOption(input)])
+        handleTagClick(input)
         e.preventDefault()
         break
       default:
         return true
     }
-  }
-
-  function handleTagClick(tag) {
-    setInput("")
-    setTags([...tags, createOption(tag)])
   }
 
   React.useEffect(() => {
