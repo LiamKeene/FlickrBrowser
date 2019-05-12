@@ -1,2 +1,0 @@
-# FlickrBrowser
-Created with CodeSandbox
