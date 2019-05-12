@@ -91,8 +91,11 @@ const App = () => {
             photos.map(photo => (
               <Photo key={photo.link} onTagClick={handleTagClick} {...photo} />
             ))}
-          {photos.length === 0 && (
+          {tags.length === 0 && photos.length === 0 && (
             <p>Photos will be displayed as tags are added</p>
+          )}
+          {tags.length > 0 && photos.length === 0 && (
+            <p>No matching photos, try removing some tags.</p>
           )}
         </Content>
       </MainContent>
