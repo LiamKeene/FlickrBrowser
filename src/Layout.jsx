@@ -36,5 +36,6 @@ export const Content = styled.div`
     flex-flow: row wrap;
     flex-basis: 65%;
     margin-left: 0.5rem;
+    margin-top: 0;
   `}
 `
